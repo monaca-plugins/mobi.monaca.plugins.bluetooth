@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="mobi.monaca.plugins.bluetooth"
+    version="1.0.0">
+
+    <name>BluetoothPlugin</name>
+	<description>BluetoothPlugin</description>
+    <engines>
+        <engine name="cordova" version=">=2.9.0" />
+    </engines>
+    <license>Asial</license>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="BluetoothPlugin">
+                <param name="android-package" value="mobi.monaca.framework.plugin.BluetoothPlugin"/>
+            </feature>
+        </config-file>
+    </platform>
+</plugin>
