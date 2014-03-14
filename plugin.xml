@@ -11,10 +11,14 @@
     </engines>
     <license>Asial</license>
     <platform name="android">
-        <config-file target="config.xml" parent="/*">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BluetoothPlugin">
                 <param name="android-package" value="mobi.monaca.framework.plugin.BluetoothPlugin"/>
             </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.BLUETOOTH"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
         </config-file>
     </platform>
 </plugin>
