@@ -18,7 +18,7 @@
 	 * @param errorCallback function to be called when enabling was not possible / did fail
 	 */
 	Bluetooth.prototype.enable = function(successCallback,failureCallback) {
-	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'enable', []);
+	    cordova.exec(successCallback, failureCallback, 'BluetoothPlugin', 'enable', []);
 	};
 	
 	/**
@@ -28,7 +28,7 @@
 	 * @param errorCallback function to be called when disabling was not possible / did fail
 	 */
 	Bluetooth.prototype.disable = function(successCallback,failureCallback) {
-	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'disable', []);
+	    cordova.exec(successCallback, failureCallback, 'BluetoothPlugin', 'disable', []);
 	};
 	
 	/**
@@ -38,7 +38,7 @@
 	 * @param errorCallback function to be called when there was a problem while discovering devices
 	 */
 	Bluetooth.prototype.discoverDevices = function(successCallback,failureCallback) {
-	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'discoverDevices', []);
+	    cordova.exec(successCallback, failureCallback, 'BluetoothPlugin', 'discoverDevices', []);
 	};
 	
 	/**
@@ -48,7 +48,7 @@
 	 * @param errorCallback function to be called when there was a problem while listing UUIDs
 	 */
 	Bluetooth.prototype.getUUIDs = function(successCallback,failureCallback,address) {
-	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'getUUIDs', [address]);
+	    cordova.exec(successCallback, failureCallback, 'BluetoothPlugin', 'getUUIDs', [address]);
 	};
 	
 	/**
@@ -58,7 +58,7 @@
 	 * @param errorCallback function to be called when there was a problem while opening the connection
 	 */
 	Bluetooth.prototype.connect = function(successCallback,failureCallback,address,uuid) {
-	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'connect', [address, uuid]);
+	    cordova.exec(successCallback, failureCallback, 'BluetoothPlugin', 'connect', [address, uuid]);
 	};
 	
 	/**
@@ -68,7 +68,7 @@
 	 * @param errorCallback function to be called when there was a problem while closing the connection
 	 */
 	Bluetooth.prototype.disconnect = function(successCallback,failureCallback,socketid) {
-	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'disconnect', [socketid]);
+	    cordova.exec(successCallback, failureCallback, 'BluetoothPlugin', 'disconnect', [socketid]);
 	};
 	
 	/**
@@ -78,7 +78,7 @@
 	 * @param errorCallback function to be called when there was a problem while reading
 	 */
 	Bluetooth.prototype.read = function(successCallback,failureCallback,socketid) {
-	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'read', [socketid]);
+	    cordova.exec(successCallback, failureCallback, 'BluetoothPlugin', 'read', [socketid]);
 	};
 	
 	module.exports = new Bluetooth();
