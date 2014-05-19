@@ -9,7 +9,7 @@
 		if( device.platform.toLowerCase() == "android" ) return true;
 		
 		return false;
-	}
+	};
 	
 	/**
 	 * Enable bluetooth
@@ -19,7 +19,7 @@
 	 */
 	Bluetooth.prototype.enable = function(successCallback,failureCallback) {
 	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'enable', []);
-	}
+	};
 	
 	/**
 	 * Disable bluetooth
@@ -29,7 +29,7 @@
 	 */
 	Bluetooth.prototype.disable = function(successCallback,failureCallback) {
 	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'disable', []);
-	}
+	};
 	
 	/**
 	 * Search for devices  and list them
@@ -39,7 +39,7 @@
 	 */
 	Bluetooth.prototype.discoverDevices = function(successCallback,failureCallback) {
 	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'discoverDevices', []);
-	}
+	};
 	
 	/**
 	 * Return list of available UUIDs for a given device
@@ -49,7 +49,7 @@
 	 */
 	Bluetooth.prototype.getUUIDs = function(successCallback,failureCallback,address) {
 	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'getUUIDs', [address]);
-	}
+	};
 	
 	/**
 	 * Open an RFComm channel for a given device & uuid endpoint
@@ -59,7 +59,7 @@
 	 */
 	Bluetooth.prototype.connect = function(successCallback,failureCallback,address,uuid) {
 	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'connect', [address, uuid]);
-	}
+	};
 	
 	/**
 	 * Close a RFComm channel for a given socket-id
@@ -69,7 +69,7 @@
 	 */
 	Bluetooth.prototype.disconnect = function(successCallback,failureCallback,socketid) {
 	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'disconnect', [socketid]);
-	}
+	};
 	
 	/**
 	 * Read from a connected socket
@@ -79,6 +79,6 @@
 	 */
 	Bluetooth.prototype.read = function(successCallback,failureCallback,socketid) {
 	    return exec(successCallback, failureCallback, 'BluetoothPlugin', 'read', [socketid]);
-	}
+	};
 	
 	module.exports = new Bluetooth();
