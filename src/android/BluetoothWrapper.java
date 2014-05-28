@@ -1,4 +1,4 @@
-package org.apache.cordova.bluetooth;
+package mobi.monaca.framework.plugin;
 
 import java.io.IOException;
 import java.io.InputStream;

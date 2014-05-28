@@ -29,6 +29,9 @@
         </config-file>
 
         <source-file src="src/android/BluetoothPlugin.java" target-dir="src/mobi/monaca/framework/plugin"/>        
+        <source-file src="src/android/BluetoothError.java" target-dir="src/mobi/monaca/framework/plugin"/>        
+        <source-file src="src/android/BluetoothWrapper.java" target-dir="src/mobi/monaca/framework/plugin"/>        
+        <source-file src="src/android/Pair.java" target-dir="src/mobi/monaca/framework/plugin"/>        
     </platform>
 
 

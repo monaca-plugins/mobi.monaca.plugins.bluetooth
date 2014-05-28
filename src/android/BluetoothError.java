@@ -1,4 +1,4 @@
-package org.apache.cordova.bluetooth;
+package mobi.monaca.framework.plugin;
 
 /**
  * Container class for different error codes for Bluetooth.
