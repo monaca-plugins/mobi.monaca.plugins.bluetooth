@@ -1,5 +1,16 @@
-	var Bluetooth = function() {};
-	
+var exec = require('cordova/exec');
+
+/**
+ * Create a new instance of Bluetooth(Plugin).
+ *
+ * @class       Bluetooth
+ * @classdesc   BluetoothPlugin for cordova 3.0.0+ (PhoneGap).
+ */
+var Bluetooth = function()
+{
+    this.platforms = [ "android" ];
+};
+
 /**
  * Check if the API is supported on this platform. Requires the
  * cordova-plugin-device to function on PhoneGap 3.0.0 onwards.
@@ -393,5 +404,6 @@ Bluetooth.prototype.write = function(onSuccess, onError, data, encoding, forceSt
 
     exec(onSuccess, onError, "Bluetooth", "write", [data, encoding, forceString]);
 }
-	
-	module.exports = new Bluetooth();
+
+var bluetooth   = new Bluetooth();
+module.exports  = bluetooth;
