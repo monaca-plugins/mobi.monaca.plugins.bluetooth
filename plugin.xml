@@ -5,7 +5,9 @@
     version="1.0.0">
 
     <name>BluetoothPlugin</name>
-	<description>BluetoothPlugin</description>
+    <description>
+        Allows access to device bluetooth-API via JavaScript.
+    </description>
     <engines>
         <engine name="cordova" version=">=2.9.0" />
     </engines>
@@ -17,21 +19,27 @@
 
     <!-- android -->
     <platform name="android">
+
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="BluetoothPlugin">
-                <param name="android-package" value="mobi.monaca.framework.plugin.BluetoothPlugin"/>
+            <feature name="Bluetooth">
+                <param name="android-package" value="org.apache.cordova.bluetooth.BluetoothPlugin" />
             </feature>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
-            <uses-permission android:name="android.permission.BLUETOOTH"/>
-            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
         </config-file>
 
-        <source-file src="src/android/BluetoothPlugin.java" target-dir="src/mobi/monaca/framework/plugin"/>        
-        <source-file src="src/android/BluetoothError.java" target-dir="src/mobi/monaca/framework/plugin"/>        
-        <source-file src="src/android/BluetoothWrapper.java" target-dir="src/mobi/monaca/framework/plugin"/>        
-        <source-file src="src/android/Pair.java" target-dir="src/mobi/monaca/framework/plugin"/>        
+        <js-module src="www/bluetooth.js" name="bluetooth">
+            <clobbers target="bluetooth" />
+        </js-module>
+
+        <source-file src="src/android/BluetoothPlugin.java" target-dir="src/org/apache/cordova/bluetooth" />
+        <source-file src="src/android/BluetoothWrapper.java" target-dir="src/org/apache/cordova/bluetooth" />
+        <source-file src="src/android/BluetoothError.java" target-dir="src/org/apache/cordova/bluetooth" />
+        <source-file src="src/android/Pair.java" target-dir="src/org/apache/cordova/bluetooth" />
+
     </platform>
 
 
