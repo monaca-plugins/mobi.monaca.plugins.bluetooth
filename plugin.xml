@@ -21,7 +21,7 @@
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Bluetooth">
-                <param name="android-package" value="org.apache.cordova.bluetooth.BluetoothPlugin" />
+                <param name="android-package" value="mobi.monaca.framework.plugin.BluetoothPlugin" />
             </feature>
         </config-file>
 
@@ -34,10 +34,10 @@
             <clobbers target="bluetooth" />
         </js-module>
 
-        <source-file src="src/android/BluetoothPlugin.java" target-dir="src/org/apache/cordova/bluetooth" />
-        <source-file src="src/android/BluetoothWrapper.java" target-dir="src/org/apache/cordova/bluetooth" />
-        <source-file src="src/android/BluetoothError.java" target-dir="src/org/apache/cordova/bluetooth" />
-        <source-file src="src/android/Pair.java" target-dir="src/org/apache/cordova/bluetooth" />
+        <source-file src="src/android/BluetoothPlugin.java" target-dir="src/mobi/monaca/framework/plugin" />
+        <source-file src="src/android/BluetoothWrapper.java" target-dir="src/mobi/monaca/framework/plugin" />
+        <source-file src="src/android/BluetoothError.java" target-dir="src/mobi/monaca/framework/plugin" />
+        <source-file src="src/android/Pair.java" target-dir="src/mobi/monaca/framework/plugin" />
 
     </platform>
 
