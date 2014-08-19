@@ -153,6 +153,15 @@ public class BluetoothWrapper
 	}
 	
 	/**
+	 * Unregister broadcast receivers
+	 * 
+	 * @param ctx
+	 */
+	public void unregisterReceivers(Context ctx) {
+		ctx.unregisterReceiver(_receiver);
+	}
+	
+	/**
 	 * Check whether Bluetooth is on or off.
 	 * 
 	 * @return Flag indicating if Bluetooth is enabled on this device.

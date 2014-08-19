@@ -19,6 +19,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.annotation.TargetApi;
+import android.content.Context;
 
 
 /**
@@ -197,6 +198,16 @@ public class BluetoothPlugin extends CordovaPlugin
 		}
 		
 		return true;
+	}
+	
+	/**
+	 * onDestroy
+	 */
+	@Override
+	public void onDestroy() {
+		if (cordova instanceof Context) {
+			_bluetooth.unregisterReceivers((Context)cordova);
+		}
 	}
 	
 	/**
