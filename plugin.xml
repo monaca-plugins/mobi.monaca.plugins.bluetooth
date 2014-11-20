@@ -7,7 +7,7 @@
     <name>BluetoothPlugin</name>
 
     <description>
-        Allows access to device bluetooth-API via JavaScript.
+        This plugin enables access to device bluetooth-API via JavaScript.
     </description>
 
     <engines>
