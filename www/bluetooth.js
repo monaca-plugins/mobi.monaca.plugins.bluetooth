@@ -141,7 +141,7 @@ Bluetooth.prototype.isDiscovering = function(onSuccess, onError)
  */
 Bluetooth.prototype.startDiscovery = function(onDeviceDiscovered, onDiscoveryFinished, onError, opts)
 {
-    opts = opts || {};
+    opts = opts || {};
     if(opts.timeout)
     {
         var timeout = function()
